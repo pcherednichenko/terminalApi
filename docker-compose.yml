@@ -1,0 +1,9 @@
+api:
+  restart: always
+  image: php:7.1-apache
+  container_name: api
+  command: php -S 0.0.0.0:8000 -t /api
+  ports:
+    - "8000:8000"
+  volumes:
+    - ./api:/api
